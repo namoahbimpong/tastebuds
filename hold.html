@@ -1,0 +1,34 @@
+      <!--Add/Edit Recipe Form-->
+      <section id="form-section">
+        <form id="recipe-form">
+          <div class="form-group">
+            <label for="recipe-name">Recipe Name</label>
+            <input type="text" id="recipe-name" name="recipe-name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="recipe-ingredients">Ingredients</label>
+            <textarea id="recipe-ingredients" name="recipe-ingredients" rows="4" placeholder="One ingredient per line" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="recipe-steps">Steps</label>
+            <textarea id="recipe-steps" name="recipe-steps" rows="4" placeholder="One step per line" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="recipe-tags">Tags</label>
+            <input type="text" id="recipe-tags" name="recipe-tags" placeholder="e.g. dinner, dessert (comma separated)" />
+          </div>
+
+          <button type="submit" id="form-submit-btn">Add Recipe</button>
+
+        </form>
+      </section>
+
+      <!-- Recipe Cards -->
+      <section id="recipes-section">
+        <div id="recipe-list">
+          <!-- recipe cards get inserted here by JS -->
+        </div>
+      </section>

@@ -6,58 +6,126 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TasteBuds</title>
     <link rel="stylesheet" href="./src/style.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,200..900&family=Work+Sans:wght@100..900&display=swap" rel="stylesheet">
   </head>
 
   <body>
 
-    <header>
-      <h1>TasteBuds</h1>
+    <header id="header">
+      <h1 onclick="window.location.href='index.html'">TasteBuds</h1>
+
+      <div class="navigation">
+        <a href="index.html"><p>Home</p></a>
+        <a href="create-card.html"><p>Create Card</p></a>
+        <a href="library.html"><p>My Library</p></a>
+        <a href="explore.html"><p>Explore</p></a>
+      </div>
+
+      <div id="filters-section">
+        <input type="search" id="search-box" placeholder="Search recipes...">
+        <div id="tag-filters">
+          <!-- tag filter buttons get inserted here by JS -->
+        </div>
+      </div>
+
+      <div id="notifications">
+        <span class="material-icons">notifications</span>
+      </div>
+
+      <div id="account-circle">
+        <span class="material-icons">account_circle</span>
+      </div>
     </header>
 
     <main>
 
-      <!--Add/Edit Recipe Form-->
-      <section id="form-selection">
-        <form id="recipe-form">
-          <div class="form-group">
-            <label for="recipe-name">Recipe Name</label>
-            <input type="text" id="recipe-name" name="recipe-name" required />
+      <aside>
+        <div id="menu">
+          <div>
+            <span class="material-icons">local_dining</span>
+            <p>All Recipes</p>
+          </div>
+        
+          <div>
+            <span class="material-icons">storefront</span>
+            <p>Italian</p>
+          </div>
+        
+          <div>
+            <span class="material-icons">eco</span>
+            <p>Vegetarian</p>
+          </div>
+        
+          <div>
+            <span class="material-icons">timer</span>
+            <p>Quick Meals</p>
+          </div>
+        
+          <div>
+            <span class="material-icons">trending_up</span>
+            <p>Trending</p>
           </div>
 
-          <div class="form-group">
-            <label for="recipe-ingredients">Ingredients</label>
-            <textarea id="recipe-ingredients" name="recipe-ingredients" rows="4" placeholder="One ingredient per line" required></textarea>
-          </div>
-
-          <div class="form-group">
-            <label for="recipe-steps">Steps</label>
-            <textarea id="recipe-steps" name="recipe-steps" rows="4" placeholder="One step per line" required></textarea>
-          </div>
-
-          <div class="form-group">
-            <label for="recipe-tags">Tags</label>
-            <input type="text" id="recipe-tags" name="recipe-tags" placeholder="e.g. dinner, dessert (comma separated)" />
-          </div>
-
-          <button type="submit" id="form-submit-btn">Add Recipe</button>
-
-        </form>
-      </section>
-
-      <!--Search & Tag Filters-->
-      <section id="filters-section">
-        <input type="text" id="search-box" placeholder="Search recipes..." />
-        <div id="tag-filters">
-          <!-- tag filter buttons get inserted here by JS -->
+          <section>
+            <a href="create-card.html"><button>Create Card</button></a>
+          </section>
         </div>
-      </section>
+      </aside>
 
-      <!-- Recipe Cards -->
-      <section id="recipes-section">
-        <div id="recipe-list">
-          <!-- recipe cards get inserted here by JS -->
-        </div>
-      </section>
+      <div>
+        <section class="hero">
+          <section class="hero-1">
+            <button>RECIPE OF THE DAY</button>
+          </section>
+
+          <section class="hero-2">
+            <h1>Rustic Herb-Crusted Salmon with Seasonal Greens</h1> <!--Change this to use the name of any random meal in the database-->
+            <p>A masterclass in simplicity. Fresh Atlantic salmon finished with a fragrant garden herb crust and served alongside tender sautee...</p>
+          </section>
+
+          <section class="hero-3">
+            <button>View Recipe</button>
+            <p><span class="material-icons">timer</span>25 Mins</p> <!--Replace this with average time to make from the database-->
+            <p><span class="material-icons">dining</span>Intermediate</p> <!--Replace this with average time to make from the database-->
+          </section>
+        </section>
+
+        <section class="trending-recipes">
+          <section class="trending-heading">
+            <section class="trending-heading-text">
+              <h3>Trending Recipes</h3>
+              <p>What's cooking in the community this week</p>
+            </section>
+            <section class="all-option">
+              <p>See All<span class="material-icons">keyboard_arrow_right</span></p> <!--Link this to the explore page-->
+            </section>
+          </section>
+
+          <section class="trending-recipe-grid">
+            <section id="trending-recipe-card"> <!--Duplicate the card to form a 3 on a row grid. The grid should-->
+              <div id="recipe-image">
+                <img src="./src/assets/hero-image-placeholder.jpg" alt="recipe_image"> <!--Replace this image with the image of the recipe being shown on the card-->
+              </div>
+
+              <div  class="recipe-tag">
+                <p>Vegetarian</p> <!--Replace this with the actual tag of the recipe being shown-->
+              </div>
+
+              <div class="recipe-card-name">
+                <p>Wild Mushroom Risotto</p> <!--Replace this with the name of the recipe-->
+              </div>
+
+              <div class="recipe-card-bottom">
+                <p><span class="material-icons">timer</span>25 Mins</p> <!--Replace this with average time to make from the database-->
+                <p><span class="material-icons">dining</span>Intermediate</p> <!--Replace this with average time to make from the database-->
+              </div>
+            </section>
+          </section>
+        </section>
+      </div>
       
     </main>
     <script type="module" src="/src/main.js"></script>
