@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TasteBuds</title>
+        <link rel="stylesheet" href="./src/style.css"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,200..900&family=Work+Sans:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header id="header">
+            <h1 onclick="window.location.href='index.html'">TasteBuds</h1>
+
+            <div class="navigation">
+                <a href="index.html"><p>Home</p></a>
+                <a href="create-card.html"><p>Create Card</p></a>
+                <a href="library.html"><p>My Library</p></a>
+            </div>
+
+            <div id="filters-section">
+                <input type="search" id="search-box" placeholder="Search recipes...">
+                <div id="tag-filters">
+                    <!-- tag filter buttons get inserted here by JS -->
+                </div>
+            </div>
+
+            <div id="notifications">
+                <span class="material-icons">notifications</span>
+            </div>
+
+            <div id="account-circle">
+                <span class="material-icons">account_circle</span>
+            </div>
+        </header>
+
+        <main class="cc-main">
+            <div class="cc-main-left">
+                <section>
+                    <p class="cc-heading"><b>Recipe Architect</b></p>
+                    <p class="cc-heading-text">Draft your culinary masterpiece wih precision and style</p>
+                </section>
+
+                <section class="recipe-highlights">
+                    <section>
+                        <p>Recipe Title</p>
+                        <input type="text" placeholder="e.g. Tom Brown" id="recipe-title">
+                    </section>
+
+                    <section class="time-servings">
+                        <div>
+                            <p>Prep Time (mins)</p>
+                            <input type="text" placeholder="e.g. 20" id="prep-time">
+                        </div>
+                        <div>
+                            <p>Servings</p>
+                            <input type="text" placeholder="e.g. 4" id="servings">
+                        </div>
+                    </section>
+                </section>
+
+                <section class="ingredients">
+                    <div class="ingredients-heading">
+                        <h2>Ingredients</h2>
+                        <p ><em>Enter one per line</em></p>
+                    </div>
+
+                    <div>
+                        <textarea
+                            id="ingredients"
+                            name="ingredients"
+                            placeholder="Write ingredients here..."></textarea>
+                    </div>
+                </section>
+
+                <section class="instructions">
+                    <div class="instructions-heading">
+                        <h2>Instructions</h2>
+                        <p><em>One step per line</em></p>
+                    </div>
+
+                    <div>
+                        <textarea
+                            id="instructions"
+                            name="instructions"
+                            placeholder="Write instructions here..."></textarea>
+                    </div>
+                </section>
+
+                <section class="image-upload">
+                    <div>
+                        <h2>Upload Recipe Image</h2>
+                    </div>
+
+                    <div>
+                        <input type="file" accept="image/*" id="recipe-image">
+                    </div>
+                </section>
+
+                <section id="savebutton">
+                    <button type="submit">Save</button>
+                </section>
+            </div>
+
+            <div class="cc-right-div">
+                <section class="recipe-flow">
+                    <section class="cc-recipe-card">
+                        <div class="title">
+                            <p>Recipe Title</p> <!--Insert recipe title here--> <!--The background image should be the image of the recipe-->
+                        </div>
+
+                        <div class="recipe-elements">
+                            <p><span class="material-icons">timer</span>20 mins</p>
+                            <p><span class="material-icons">group</span>4 Servings</p>
+                            <p><span class="material-icons">restaurant</span>Intermediate</p>
+                        </div>
+                    </section>
+                </section>
+            </div>
+
+        </main>
+    </body>
+</html>
