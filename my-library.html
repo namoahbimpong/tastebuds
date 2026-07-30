@@ -84,7 +84,15 @@
                 <!--Duplicate the card to show a horizontal grid-->
                 <!--When the card is clicked, it should show a pop-up with all the information they submitted-->
                 <section class="recipe-grid">
-                    <section id="recipe-card"> <!--Duplicate the card to form a 3 on a row grid. The grid should-->
+                    <section id="recipe-card"
+                        data-title="Wild Mushroom Risotto"
+                        data-tag="Vegetarian"
+                        data-time="25 Mins"
+                        data-difficulty="Intermediate"
+                        data-image="./src/assets/hero-image-placeholder.jpg"
+                        data-ingredients="Arborio rice, wild mushrooms, parmesan cheese, vegetable stock, garlic, onion"
+                        data-instructions="Sauté the onion and garlic. Add mushrooms, then stir in the rice. Gradually add stock until creamy, then finish with parmesan."> <!--Duplicate the card to form a 3 on a row grid. The grid should-->
+                        
                         <div id="recipe-image">
                             <img src="./src/assets/hero-image-placeholder.jpg" alt="recipe_image"> <!--Replace this image with the image of the recipe being shown on the card-->
                         </div>
@@ -106,6 +114,47 @@
             </section>
         </main>
 
+        <!-- Recipe Modal -->
+        <div class="recipe-modal hidden" id="recipeModal">
+            <div class="recipe-modal-content">
+
+                <button class="recipe-modal-close" id="closeRecipeModal">
+                    &times;
+                </button>
+
+                <img id="modalImage" src="" alt="Recipe image">
+
+                <div class="recipe-modal-body">
+                    <span if="modalTag" class="recipe-modal-tag"></span>
+
+                    <h2 id="modalTitle"></h2>
+
+                    <div class="recipe-modal-meta">
+                        <p>
+                            <span class="material-icons">timer</span>
+                            <span id="modalTime"></span>
+                        </p>
+
+                        <p>
+                            <span class="material-icons">dining</span>
+                            <span id="modalDifficulty"></span>
+                        </p>
+                    </div>
+
+                    <section class="recipe-modal-section">
+                        <h3>Ingredients</h3>
+                        <p id="modalIngredients"></p>
+                    </section>
+
+                    <section class="recipe-modal-section">
+                        <h3>Instructions</h3>
+                        <p id="modalInstructions"></p>
+                    </section>
+                </div>
+            </div>
+        </div>
+
         <script type="module" src="./src/my-library.js"></script>
+        <script type="module" src="./src/recipe-modal.js"></script>
     </body>
 </html>
