@@ -353,6 +353,12 @@ a {
 
 }
 
+.recipe-grid {
+  display: grid;
+  grid-template-columns: max-content;
+  grid-template-rows: max-content;
+}
+
 .trending-recipes {
   display: flex;
   flex-direction: column;
@@ -381,7 +387,7 @@ a {
   cursor: pointer;
 }
 
-#trending-recipe-card {
+#recipe-card {
   width: 180px;
   height: 250px;
 
@@ -391,6 +397,10 @@ a {
   border: 1px solid #ccc;
   border-radius: 10px;
   overflow: hidden;
+}
+
+#recipe-card:hover {
+  cursor: pointer;
 }
 
 #recipe-image {
@@ -613,4 +623,23 @@ a {
   flex-direction: column;
   margin-top: 20px;
   gap: 10px;
+}
+
+.mylibrary-main {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  padding-top: 100px;
+  margin-left: 50px;
+  margin-right: 50px;
+  max-width: 100%;
+}
+
+.mylibrary-heading {
+  display: flex;
+  flex-direction: column;
+  margin-bottom:20px;
+}
+
+.mylibrary-heading p {
+  margin-top: 10px;
 }
