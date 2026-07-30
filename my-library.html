@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TasteBuds</title>
+        <link rel="stylesheet" href="./src/style.css"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,200..900&family=Work+Sans:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header id="header">
+            <h1 onclick="window.location.href='index.html'">TasteBuds</h1>
+
+            <div class="navigation">
+                <a href="index.html"><p>Home</p></a>
+                <a href="create-card.html"><p>Create Card</p></a>
+                <a href="my-library.html"><p>My Library</p></a>
+            </div>
+
+            <div id="filters-section">
+                <input type="search" id="search-box" placeholder="Search recipes...">
+                <div id="tag-filters">
+                    <!-- tag filter buttons get inserted here by JS -->
+                </div>
+            </div>
+
+            <div id="notifications">
+                <span class="material-icons">notifications</span>
+            </div>
+
+            <div id="account-circle">
+                <span class="material-icons">account_circle</span>
+            </div>
+        </header>
+
+        <main class="mylibrary-main">
+            
+            <aside>
+                <div id="menu">
+                    <div>
+                        <span class="material-icons">local_dining</span>
+                        <p>All Recipes</p>
+                    </div>
+        
+                    <div>
+                        <span class="material-icons">storefront</span>
+                        <p>Italian</p>
+                    </div>
+        
+                    <div>
+                        <span class="material-icons">eco</span>
+                        <p>Vegetarian</p>
+                    </div>
+        
+                    <div>
+                        <span class="material-icons">timer</span>
+                        <p>Quick Meals</p>
+                    </div>
+        
+                    <div>
+                        <span class="material-icons">trending_up</span>
+                        <p>Trending</p>
+                    </div>
+
+                    <section>
+                        <a href="create-card.html"><button>Create Card</button></a>
+                    </section>
+                </div>
+            </aside>
+            
+            <section>
+
+                <section class="mylibrary-heading">
+                    <h1>My Library</h1>
+                    <p>Organize your culinary journey. Manage your exquisite recipe cards</p>
+                </section>
+
+                <!--Library collection grid-->
+                <!--Duplicate the card to show a horizontal grid-->
+                <!--When the card is clicked, it should show a pop-up with all the information they submitted-->
+                <section class="recipe-grid">
+                    <section id="recipe-card"> <!--Duplicate the card to form a 3 on a row grid. The grid should-->
+                        <div id="recipe-image">
+                            <img src="./src/assets/hero-image-placeholder.jpg" alt="recipe_image"> <!--Replace this image with the image of the recipe being shown on the card-->
+                        </div>
+
+                        <div  class="recipe-tag">
+                            <p>Vegetarian</p> <!--Replace this with the actual tag of the recipe being shown-->
+                        </div>
+
+                        <div class="recipe-card-name">
+                            <p>Wild Mushroom Risotto</p> <!--Replace this with the name of the recipe-->
+                        </div>
+
+                        <div class="recipe-card-bottom">
+                            <p><span class="material-icons">timer</span>25 Mins</p> <!--Replace this with average time to make from the database-->
+                            <p><span class="material-icons">dining</span>Intermediate</p> <!--Replace this with average time to make from the database-->
+                        </div>
+                    </section>
+                </section>
+            </section>
+        </main>
+
+        <script type="module" src="./src/my-library.js"></script>
+    </body>
+</html>
